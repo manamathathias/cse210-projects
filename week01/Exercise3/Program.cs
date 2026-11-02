@@ -4,31 +4,31 @@ class Program
 {
     static void Main(string[] args)
     {
-        Random random = new Random();
-        int magicNumber = random.Next(1, 101);
-        int guess = -1;
-        int guessCount = 0;
+        Random randomguess = new Random();
+        int magicnumber = randomguess.Next(1, 2026);
+        int guessnumber = -1;
+        int guesscount = 0;
 
-        while (guess != magicNumber)
+        while (guessnumber != magicnumber)
         {
-            Console.Write("What is your guess? ");
-            guess = int.Parse(Console.ReadLine());
-            guessCount++;
+            Console.Write("What is your guess number? ");
+            guessnumber = int.Parse(Console.ReadLine());
+            guesscount++;
 
-            if (magicNumber > guess)
+            if (guessnumber < magicnumber)
             {
-                Console.WriteLine("Higher");
+                Console.WriteLine("Your guess is too low.");
             }
-            else if (magicNumber < guess)
+            else if (guessnumber > magicnumber)
             {
-                Console.WriteLine("Lower");
+                Console.WriteLine("Your guess is too high.");
             }
             else
             {
-                Console.WriteLine("You guessed it!");
+                Console.WriteLine("Your guess is correct!");
             }
         }
 
-        Console.WriteLine($"It took you {guessCount} guesses.");
+        Console.WriteLine($"It took you {guesscount} guesses.");
     }
 }

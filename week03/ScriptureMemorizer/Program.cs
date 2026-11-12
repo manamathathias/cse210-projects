@@ -5,6 +5,7 @@
 // 4. Progress counter showing how many words are hidden
 // 5. Only visible words are chosen for hiding (stretch challenge)
 // 6. These program ask for a difficulty before proceeding, with that, it sets how many words are hidden in each round.
+// 7. The hardest section and the easiest or progress counter help users to track memorization, and only visible words are  chosen so that no words are hidden twice.
 List<Scripture> library = new List<Scripture>
 {
     new Scripture(new Reference("Genesis", 1, 1, 10),

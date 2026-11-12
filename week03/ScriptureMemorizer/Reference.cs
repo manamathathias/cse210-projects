@@ -2,7 +2,7 @@ public class Reference
 {
     private string _book;
     private int _chapter;
-    private int _startVerse;
+    private int _verse;
     private int _endVerse;
 
     // Single verse, such as John 3:16
@@ -10,7 +10,7 @@ public class Reference
     {
         _book = book;
         _chapter = chapter;
-        _startVerse = verse;
+        _verse = verse;
         _endVerse = verse;
     }
 
@@ -19,16 +19,16 @@ public class Reference
     {
         _book = book;
         _chapter = chapter;
-        _startVerse = startVerse;
+        _verse = startVerse;
         _endVerse = endVerse;
     }
 
     public string GetDisplayText()
     {
-        if (_startVerse == _endVerse)
+        if (_verse == _endVerse)
         {
-            return $"{_book} {_chapter}:{_startVerse}";
+            return $"{_book} {_chapter}:{_verse}";
         }
-        return $"{_book} {_chapter}:{_startVerse}-{_endVerse}";
+        return $"{_book} {_chapter}:{_verse}-{_endVerse}";
     }
 }
